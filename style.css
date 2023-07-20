@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Herr+Von+Muellerhoff&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Agdasima', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:80vh;
+    border: 1px solid gray;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 10;
+}
+
+.panel.active h3{
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+        
+}
